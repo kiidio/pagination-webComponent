@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<!-- disable iPhone inital scale -->
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1, user-scalable=no">
+	<title> page </title>
+	<script src="http://lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js"></script>
+	<script src="page.js"></script>
+
+
+	<style>
+		body{padding: 0;margin: 0;}
+		 a{text-decoration: none;}
+        li{list-style: none;}
+        .pagination li{float: left;margin-left: 10px;}
+        .pagination li a,.pagination li span{display:inline-block;width: 28px;height: 28px;background: url(assert/page.png) no-repeat 0 -48px;color:#b8c2cc;font-size: 14px;text-align: center;line-height: 28px;}
+        .pagination li a.current{background-position: 0 -1px;color:#fff;cursor: default;}
+        .pagination li a:hover{background-position: 0 -1px;color:#fff;}
+        .pagination li a.disable:hover{background-position:0 -49px;color:#b8c2cc;}
+        .pagination li.ellipsis{width: 28px;height: 28px;background: url(assert/page.png) no-repeat 0 -100px;}
+        .pagination li span.disable{background-position:0 -49px;color:#b8c2cc;}
+        .clr{clear:both;background: none;border: none;}
+	</style>
+	
+
+
+</head>
+
+<body>
+<div class="pagination">
+</div>
+
+<p>使用示例</p>
+<pre>
+   $(".pagination").createPage({
+        pageCount:70,
+        current:60,
+        backFn:function(p){
+            //单击回调方法，p是当前页码
+        }
+    }); 
+</pre>
+
+</body>
+
+ <script>
+    $(".pagination").createPage({
+        pageCount:70,
+        current:23,
+        backFn:function(p){
+            //单击回调方法，p是当前页码
+        }
+    }); 
+ </script>
+
+
+
+</html>
+
